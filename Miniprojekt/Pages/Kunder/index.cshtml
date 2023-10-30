@@ -1,0 +1,32 @@
+@page
+@using Miniprojekt.Model
+@model Miniprojekt.Pages.Kunder.index
+
+
+@{
+    Layout = null;
+}
+
+<h1 class="jumbotron">Vis Alle Kunder</h1>
+
+<table class="table-hover">
+    <thead>
+    <tr>
+        <th>Kunde Nummer</th>
+        <th>Navn</th>
+        <th>Telefon</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach(Kunde k in Model.Kunder)
+    {
+        <tr>
+            <td>@k.KundeNummer</td>
+            <td>@k.Navn</td>
+            <td>@k.Tlf</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<p>That was it</p>
